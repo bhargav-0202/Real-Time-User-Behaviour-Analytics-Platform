@@ -168,13 +168,6 @@ With valid Snowflake credentials in `.env`, the app queries mart models such as 
 
 ---
 
-## Security notes
-
-- Never commit **`.env`** or paste Snowflake passwords into YAML or code.
-- If a secret was ever pushed to Git history, **rotate** it in Snowflake and prefer a clean history or secret scanning on the repo.
-
----
-
 ## License
 
 This project is provided as a demonstration / portfolio codebase. Add a `LICENSE` file if you need explicit terms.
