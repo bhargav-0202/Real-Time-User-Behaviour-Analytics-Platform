@@ -6,6 +6,22 @@ End-to-end reference implementation for **streaming user events** through **Kafk
 
 ---
 
+## Sample output
+
+Streamlit dashboard wired to **Snowflake** marts (with filters, KPIs, pipeline status, and charts). Images are stored in-repo under [`docs/screenshots/`](docs/screenshots/) so they render on GitHub without external hosting.
+
+### Main dashboard (KPIs, revenue trend, clicks by category)
+
+![User Behavior Analytics — main dashboard](docs/screenshots/dashboard-overview.png)
+
+### Traffic patterns (hourly clicks & revenue, device split)
+
+![Traffic patterns — hourly clicks, revenue, and device donut](docs/screenshots/dashboard-traffic-patterns.png)
+
+**Other ways to showcase demos (optional):** pin this repo on your GitHub profile; add the same images to a **Release** or **Discussion** post; or embed a short screen recording in the repo description link (e.g. Loom / YouTube). For presentations, PDF export from the browser also works well.
+
+---
+
 ## Architecture
 
 ```mermaid
