@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_events
+    database: RAW_DB
+    schema: EVENTS
+    tables:
+      - name: RAW_CLICKS
+      - name: RAW_SESSIONS
+      - name: RAW_PURCHASES

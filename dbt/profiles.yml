@@ -1,0 +1,18 @@
+# Snowflake connection for dbt — NO secrets in this file.
+# Set SNOWFLAKE_ACCOUNT, SNOWFLAKE_USER, SNOWFLAKE_PASSWORD in your environment
+# (e.g. repo-root `.env` loaded by your shell, or CI secrets). See `.env.example`.
+
+dbt:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE', 'ACCOUNTADMIN') }}"
+      database: "{{ env_var('SNOWFLAKE_DBT_DATABASE', 'STAGING_DB') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE', 'ANALYTICS_WH') }}"
+      schema: "{{ env_var('SNOWFLAKE_DBT_SCHEMA', 'STG') }}"
+      threads: 4
+      client_session_keep_alive: false
